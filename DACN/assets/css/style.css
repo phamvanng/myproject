@@ -1,0 +1,647 @@
+/*Reset CSS*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+Những thứ cần xác định khi lập trình web
+1. Kích thước
+2. Vị trí
+3. Màu sắc
+4. Kiểu dáng (Kiểu chữ, hình dạng)
+cách code
+1.Từ ngoài vào trong
+2.Từ trên xuống dưới
+3.Tổng quan đến chi tiết
+*/
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46.5px;
+    background-color: #00bcd4;
+    z-index: 1;
+   
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+
+#nav > li{
+    display: inline-block;
+    position: relative;
+}
+
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    
+    text-decoration: none;
+    line-height: 46.5px;
+    padding: 0 24px;
+    display:inline-block;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a{
+    color: #000;
+    background-color: #ccc;
+}
+
+
+#nav .subnav{
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a{
+    color:#000;
+    width: 100%;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#header .search-btn{
+    float: right;
+}
+
+#header .search-btn:hover{
+    cursor: pointer;
+    background-color: #f44336;
+}
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46.5px;
+    padding: 0 20px;
+}
+
+#slider{
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 50%;
+    /*background: url('/assets/img/slider/slider4.png') top center / cover no-repeat;*/
+    animation: backgroundAnimation 5s infinite;
+
+}
+
+@keyframes backgroundAnimation {
+    0% {
+      background: url('/DACN/assets/img/slider/slider4.png') center/cover no-repeat;
+    }
+    33% {
+      background: url('/DACN/assets/img/slider/slider5.jpeg') center/cover no-repeat;
+    }
+    66% {
+      background: url('/DACN/assets/img/slider/slider6.jpeg') center/cover no-repeat;
+    }
+    100% {
+      background: url('/DACN/assets/img/foods/biaweb.jpg') center/cover no-repeat;
+    }
+}
+#slider .text-content {
+    position: absolute;
+    bottom: 50px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+
+}
+
+#slider .text-content::after{
+    content: "Sự lựa chọn hàng đầu.";
+    font-size: 15px;
+    text-align: center;
+    animation: text-slide 5s infinite;
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#content{
+    z-index: 1;
+    z-index: 1;
+}
+
+#content .content-section{
+    width: 800px;
+    padding: 35px 0 25px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col{
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col-half{
+    width: 50%;
+    font-size: 18px;
+
+}
+.col-full{
+    width:100%;
+} 
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+@keyframes text-slide{
+    0%, 25% {
+        content: "Sự lựa chọn hàng đầu.";
+    }
+    50% {
+        content: "Uy tín, chất lượng, thân thiện với môi trường.";
+    }
+    75% {
+        content: "Giao hành siêu tốc chỉ trong 15 phút";
+    }
+    100% {
+        content: "Sự lựa chọn hàng đầu.";
+    }
+}
+
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    line-height: 1.1px;
+}
+
+#content .about-text{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+/* fastFoods */
+#content .fastfoods-list{
+    margin-top: 30px;
+    overflow: hidden;
+}
+#content .fastfood-item {
+    float:left;
+    width: calc(100%/4);
+    text-align: center;
+}
+
+#content .fastfood-img{
+    margin-top: 15px;
+    width: 190px;
+    margin-bottom: 3px;
+    border-radius: 20px ;
+}
+#content .fastfood-img:hover{
+    opacity: 0.6;
+}
+
+#content .fastfood-name{
+    font-size: 15 px;
+    text-align: center;
+}
+
+/* fastFoods */
+
+/* foods */
+#content .foods-list{
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+#content .food-item {
+    float:left;
+    width: calc(100%/4);
+    text-align: center;
+}
+
+#content .food-img{
+    margin-top: 15px;
+    width: 190px;
+    height: 190px;
+    margin-bottom: 3px;
+    border-radius: 20px ;
+}
+#content .food-img:hover{
+    opacity: 0.6;
+}
+
+#content .food-name{
+    font-size: 15 px;
+    text-align: center;
+}
+
+/* Drinks */
+#content .drinks-list{
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+#content .drink-item {
+    float:left;
+    width: calc(100%/4);
+    text-align: center;
+}
+
+#content .drink-img{
+    margin-top: 15px;
+    width: 190px;
+    height: 190px;
+    margin-bottom: 25px;
+    border-radius: 20px ;
+}
+#content .drink-img:hover{
+    opacity: 0.6;
+}
+
+#content .drink-name{
+    font-size: 15 px;
+    text-align: center;
+}
+.buynow-btn{
+    color: #fff;
+    padding: 4px 8px;
+    margin-top: 7px;
+    text-decoration: none;
+    background-color: #00bcd4;
+    display: inline-block;
+    border-radius: 3px ;
+}
+.add-btn{
+    color: #fff;
+    padding: 4px 8px;
+    margin-left: 5px;
+    margin-top: 7px;
+    text-decoration: none;
+    background-color: #00bcd4;
+    display: inline-block;
+    border-radius: 3px ;
+
+}
+.add-btn.js-add-btn:hover {
+    opacity: 0.6;
+}
+.buynow-btn:hover{
+    opacity: 0.6;
+}
+#footer{
+
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open{
+    display: flex;
+}
+.modal-container{
+    background: #fff;
+    width: 450px ;
+    min-height: 280px;
+    border-radius: 9px; 
+    position: relative;
+    animation: modalFadeIn ease .5s;
+}
+
+.modal-container .modal-btn{
+    display:flex;
+    justify-content: center;
+}
+
+.modal-container .modal-btn-add{
+    color: #fff;
+    background-color: #00bcd4; 
+    border-radius: 3px; 
+    text-decoration: none;
+    padding: 4px 8px;
+    margin-right: 10px;
+    border: none;
+}
+
+.modal-container .modal-btn-add:hover{
+    opacity: 0.6;
+}
+
+
+.modal-container .modal-btn-buy{
+    color: #fff;
+    background-color: #00bcd4; 
+    border-radius: 3px; 
+    text-decoration: none;
+    padding: 4px 8px;
+    margin-right: 10px;
+    border: none;
+}
+.modal-container .modal-btn-buy:hover{
+    opacity:0.6;
+}
+
+.modal-container .modal-body{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+}
+
+.modal-body img {
+    max-width: 190px;
+    height: 190px;
+    position: relative;
+    top: 20%;
+}
+
+.modal-container .modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px;
+    background-color: #e75a5a;
+    cursor: pointer;
+    border-radius: 1px; 
+}
+
+.modal-container .modal-close:hover{
+    opacity: 0.7;
+}
+
+/* CSS cho container chứa tên sản phẩm và số lượng */
+.modal-name-soluong {
+    text-align: center;
+    padding: 10%;
+}
+
+/* CSS cho tên sản phẩm */
+.modal-name {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* CSS cho nhãn "Số lượng" */
+.modal-lable {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* CSS cho input số lượng */
+.modal-input {
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+@keyframes modalFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*mua ngay*/
+.modal-press-buynow-btns{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    display: none;
+    
+    
+}
+.modal-press-content {
+    display: flex;
+    text-align: center;
+    background-color: white;
+    padding-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+  
+.modal-press-btns {
+    font-size: 30px;
+    color: #333;
+    margin-left: 20px;
+    color: #110303ab;
+
+  }
+  
+.modal-yes-no-btns {
+    display: flex;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    height: 70px;
+    width: 120px;
+  }
+  .modal-yes-no-btns .modal-content-buy-btns1{
+    padding: 10px;
+    border-radius: 10px;
+    color: #d6e5dfb5;
+  }
+  .modal-yes-no-btns .modal-content-buy-btns2{
+    padding: 10px;
+    
+    border-radius: 10px;
+    color: #c4427bb5;
+  }
+  
+  .modal-content-buy-btns1:hover, .modal-content-buy-btns2:hover {
+    background-color: #00bcd4;
+  }
+
+  /*done*/
+
+.modal-done{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close-popup {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0px 7px;
+}
+.close-popup:hover{
+    opacity: 0.6;
+}
+/* Đã Thêm vào giỏ hàng*/
+.modal-add{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.modal-content-add {
+    text-align: center;
+}
+
+.close-add {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 1px 8px;
+}
+.modal-add h2{
+    padding-bottom: 10px;
+    opacity: 0.74;
+}
+
+.modal-add p{
+    opacity: 0.5;
+}
+.close-add:hover{
+    opacity: 0.6;
+}
+
+/*Contact*/
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+
+
+.mb-8{
+    margin-bottom: 8px !important;
+}
+.contact-content{
+    margin-top: 48px;
+}
+.contact-infor i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-infor{
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px  solid #ccc;
+    width: 100%;
+}
+.form-submit-btn{
+    background-color: #000;
+    color: #ccc;
+    border: none;
+    padding: 10px 16px;
+    float: right;
+}
+
+.col.col-full.mt-8.mglr {
+    margin: 8px;
+    padding-right: 24px;
+}
+
+
+input.form-submit-btn.mt-16 {
+    margin: 0px 8px;
+}
+@media(min-width: 1024px){
+
+}
+@media(min-width:740px) and (max-width: 1023px){
+
+}
+@media(max-width: 740px){
+    
+}
